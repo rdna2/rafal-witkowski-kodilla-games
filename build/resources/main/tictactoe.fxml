@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="402.0" prefWidth="600.0" style="-fx-background-image: &quot;C:\Development\Projects\JavaFXProject\src\main\resources\tTable2.png&quot;;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.HelloController">
+    <children>
+        <FlowPane layoutX="188.0" layoutY="115.0" prefHeight="226.0" prefWidth="228.0">
+            <children>
+                <Button fx:id="button1" mnemonicParsing="false" onMouseClicked="#clickB11" prefHeight="75.0" prefWidth="75.0" />
+                <Button fx:id="button2" layoutX="85.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#clickB12" prefHeight="75.0" prefWidth="75.0" />
+                <Button fx:id="button3" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#clickB13" prefHeight="75.0" prefWidth="75.0" />
+                <Button fx:id="button4" layoutX="160.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#clickB21" prefHeight="75.0" prefWidth="75.0" />
+                <Button fx:id="button5" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#clickB22" prefHeight="75.0" prefWidth="75.0" />
+                <Button fx:id="button6" layoutX="85.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#clickB23" prefHeight="75.0" prefWidth="75.0" />
+                <Button fx:id="button7" layoutX="160.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#clickB31" prefHeight="75.0" prefWidth="75.0" />
+                <Button fx:id="button8" layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onMouseClicked="#clickB32" prefHeight="75.0" prefWidth="75.0" />
+                <Button fx:id="button9" layoutX="85.0" layoutY="160.0" mnemonicParsing="false" onMouseClicked="#clickB33" prefHeight="75.0" prefWidth="75.0" />
+            </children>
+        </FlowPane>
+        <Text fx:id="winnerText" layoutX="14.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tic-Tac-Toe" textAlignment="CENTER" wrappingWidth="237.9443359375">
+            <font>
+                <Font size="39.0" />
+            </font>
+        </Text>
+        <Button layoutX="224.0" layoutY="360.0" mnemonicParsing="false" onAction="#restartGame" text="Restart Current Game?" />
+      <Button fx:id="quit" layoutX="35.0" layoutY="311.0" mnemonicParsing="false" onAction="#quit" text="Quit" />
+      <Text fx:id="whoWon" layoutX="115.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Winner" textAlignment="CENTER" wrappingWidth="390.6667175292969">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="gameCount" layoutX="345.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Counter" wrappingWidth="142.80337524414062">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="humanWins" fill="#247b49" layoutX="440.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Humanwins" textAlignment="CENTER" wrappingWidth="133.9453125">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="computerWins" fill="#a82828" layoutX="430.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Computerwins" textAlignment="CENTER" wrappingWidth="153.98309326171875">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="draws" fill="#4128ae" layoutX="469.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Draws" textAlignment="CENTER" wrappingWidth="75.33333333333326">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="471.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HUMAN " textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="455.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMPUTER" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="476.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DRAWS" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="another" layoutX="34.0" layoutY="120.0" mnemonicParsing="false" onAction="#restart" text="New Random Game?" />
+      <Button fx:id="humanFirst" layoutX="35.0" layoutY="183.0" mnemonicParsing="false" onAction="#restartHuman" text="Human First" />
+      <Button fx:id="computerFirst" layoutX="35.0" layoutY="216.0" mnemonicParsing="false" onAction="#restartComputer" text="Computer First" />
+    </children>
+</AnchorPane>
