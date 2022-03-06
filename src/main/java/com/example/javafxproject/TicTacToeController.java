@@ -129,11 +129,11 @@ public class TicTacToeController implements Initializable {
 
                 button1.setText("X");
                 button1.setDisable(true);
-                if (checkWinner() == "X") {
+                if (Objects.equals(checkWinner(), "X")) {
 
                     scores.put(gameCounter, "HUMAN");
                     playerToStart();
-                } else if (checkWinner() == ("DRAW")) {
+                } else if (Objects.equals(checkWinner(), "DRAW")) {
 
                     scores.put(gameCounter, "DRAW");
                     playerToStart();
@@ -149,11 +149,11 @@ public class TicTacToeController implements Initializable {
 
                 button2.setText("X");
                 button2.setDisable(true);
-                if (checkWinner() == "X") {
+                if (Objects.equals(checkWinner(), "X")) {
 
                     scores.put(gameCounter, "HUMAN");
                     playerToStart();
-                } else if (checkWinner() == ("DRAW")) {
+                } else if (Objects.equals(checkWinner(), "DRAW")) {
 
                     scores.put(gameCounter, "DRAW");
                     playerToStart();
@@ -168,11 +168,11 @@ public class TicTacToeController implements Initializable {
 
                 button3.setText("X");
                 button3.setDisable(true);
-                if (checkWinner() == "X") {
+                if (Objects.equals(checkWinner(), "X")) {
 
                     scores.put(gameCounter, "HUMAN");
                     playerToStart();
-                } else if (checkWinner() == ("DRAW")) {
+                } else if (Objects.equals(checkWinner(), "DRAW")) {
 
                     scores.put(gameCounter, "DRAW");
                     playerToStart();
@@ -187,11 +187,11 @@ public class TicTacToeController implements Initializable {
 
                 button4.setText("X");
                 button4.setDisable(true);
-                if (checkWinner() == "X") {
+                if (Objects.equals(checkWinner(), "X")) {
 
                     scores.put(gameCounter, "HUMAN");
                     playerToStart();
-                } else if (checkWinner() == ("DRAW")) {
+                } else if (Objects.equals(checkWinner(), "DRAW")) {
 
                     scores.put(gameCounter, "DRAW");
                     playerToStart();
@@ -206,11 +206,11 @@ public class TicTacToeController implements Initializable {
 
                 button5.setText("X");
                 button5.setDisable(true);
-                if (checkWinner() == "X") {
+                if (Objects.equals(checkWinner(), "X")) {
 
                     scores.put(gameCounter, "HUMAN");
                     playerToStart();
-                } else if (checkWinner() == ("DRAW")) {
+                } else if (Objects.equals(checkWinner(), "DRAW")) {
 
                     scores.put(gameCounter, "DRAW");
                     playerToStart();
@@ -225,11 +225,11 @@ public class TicTacToeController implements Initializable {
 
                 button6.setText("X");
                 button6.setDisable(true);
-                if (checkWinner() == "X") {
+                if (Objects.equals(checkWinner(), "X")) {
 
                     scores.put(gameCounter, "HUMAN");
                     playerToStart();
-                } else if (checkWinner() == ("DRAW")) {
+                } else if (Objects.equals(checkWinner(), "DRAW")) {
 
                     scores.put(gameCounter, "DRAW");
                     playerToStart();
@@ -244,11 +244,11 @@ public class TicTacToeController implements Initializable {
 
                 button7.setText("X");
                 button7.setDisable(true);
-                if (checkWinner() == "X") {
+                if (Objects.equals(checkWinner(), "X")) {
 
                     scores.put(gameCounter, "HUMAN");
                     playerToStart();
-                } else if (checkWinner() == ("DRAW")) {
+                } else if (Objects.equals(checkWinner(), "DRAW")) {
 
                     scores.put(gameCounter, "DRAW");
                     playerToStart();
@@ -263,11 +263,11 @@ public class TicTacToeController implements Initializable {
 
                 button8.setText("X");
                 button8.setDisable(true);
-                if (checkWinner() == "X") {
+                if (Objects.equals(checkWinner(), "X")) {
 
                     scores.put(gameCounter, "HUMAN");
                     playerToStart();
-                } else if (checkWinner() == ("DRAW")) {
+                } else if (Objects.equals(checkWinner(), "DRAW")) {
 
                     scores.put(gameCounter, "DRAW");
                     playerToStart();
@@ -282,11 +282,11 @@ public class TicTacToeController implements Initializable {
 
                 button9.setText("X");
                 button9.setDisable(true);
-                if (checkWinner() == "X") {
+                if (Objects.equals(checkWinner(), "X")) {
 
                     scores.put(gameCounter, "HUMAN");
                     playerToStart();
-                } else if (checkWinner() == ("DRAW")) {
+                } else if (Objects.equals(checkWinner(), "DRAW")) {
 
                     scores.put(gameCounter, "DRAW");
                     playerToStart();
@@ -319,12 +319,12 @@ public class TicTacToeController implements Initializable {
                 board.get(los).setOpacity(0.6);
                 board.get(los).setDisable(true);
 
-                if (checkWinner() == "O") {
+                if (Objects.equals(checkWinner(), "O")) {
 
                     scores.put(gameCounter, "COMPUTER");
 
                     playerToStart();
-                } else if (checkWinner() == "DRAW") {
+                } else if (Objects.equals(checkWinner(), "DRAW")) {
 
                     scores.put(gameCounter, "DRAW");
 
@@ -382,9 +382,9 @@ public class TicTacToeController implements Initializable {
     @FXML
     long score() {
 
-        long countHumanWins = scores.values().stream().filter(v -> v == "HUMAN").count();
-        long countComputerWins = scores.values().stream().filter(v -> v == "COMPUTER").count();
-        long countDraws = scores.values().stream().filter(v -> v == "DRAW").count();
+        long countHumanWins = scores.values().stream().filter(v -> Objects.equals(v, "HUMAN")).count();
+        long countComputerWins = scores.values().stream().filter(v -> Objects.equals(v, "COMPUTER")).count();
+        long countDraws = scores.values().stream().filter(v -> Objects.equals(v, "DRAW")).count();
         long countGames = countHumanWins + countComputerWins + countDraws;
 
         humanWins.setText(String.valueOf(countHumanWins));
